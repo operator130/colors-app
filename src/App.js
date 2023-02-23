@@ -21,6 +21,7 @@ class App extends Component {
             <PaletteList palettes={SeedColors} {...routeProps} />
           )}
         />
+
         <Route
           exact
           path="/palette/:id"
@@ -32,6 +33,9 @@ class App extends Component {
             />
           )}
         />
+
+        <Route exact path='/palette/:paletteId/:colorId' render={() => <h1>Single Color Page!</h1>} />
+
       </Switch>
 
       // <div>
