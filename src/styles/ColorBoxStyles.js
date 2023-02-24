@@ -1,5 +1,4 @@
 import chroma from "chroma-js";
-
 export default {
   ColorBox: {
     width: "20%",
@@ -106,8 +105,8 @@ export default {
       textTransform: "uppercase",
     },
     "& p": {
-      fontSize: "2rem",
-      fontWeight: "100",
+      fontSize: "3rem",
+      fontWeight: "300",
     },
   },
   showMessage: {
