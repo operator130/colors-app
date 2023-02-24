@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import PaletteFooter from "./PaletteFooter";
 import ColorBox from "./ColorBox";
@@ -20,7 +20,6 @@ class SingleColorPalette extends Component {
         allColors[key].filter((color) => color.id === colorToFilterBy)
       );
     }
-    //return all shades of given color
     return shades.slice(1);
   }
   changeFormat(val) {
@@ -34,7 +33,7 @@ class SingleColorPalette extends Component {
         key={color.name}
         name={color.name}
         background={color[format]}
-        showLink={false}
+        showingFullPalette={false}
       />
     ));
     return (
@@ -43,8 +42,10 @@ class SingleColorPalette extends Component {
         <div className="Palette-colors">
           {colorBoxes}
           <div className="go-back ColorBox">
-            <Link to={`/palette/${id}`} className="back-button">go back</Link>
-        </div>
+            <Link to={`/palette/${id}`} className="back-button">
+              GO BACK
+            </Link>
+          </div>
         </div>
         <PaletteFooter paletteName={paletteName} emoji={emoji} />
       </div>
